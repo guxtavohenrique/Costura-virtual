@@ -39,7 +39,9 @@
     "react-native-screens": "3.31.1",
     "react-native-unistyles": "^2.5.5",
     "react-native-web": "~0.19.6",
-    "expo-constants": "~16.0.1"
+    "expo-constants": "~16.0.1",
+    "expo-auth-session": "~5.5.2",
+    "expo-crypto": "~13.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

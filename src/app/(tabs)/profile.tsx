@@ -8,7 +8,7 @@ export default function Login(){
 
     const navigation = useNavigation()
 
-    function handlerSignOut() {
+    async function handlerSignOut() {
         navigation.navigate("index")
     }
 
@@ -18,7 +18,7 @@ export default function Login(){
             <View style={styles.title}>
 
                 <Text style={styles.textTitle}>
-                    Conta Google
+                    Perfil do Usuário
                 </Text>
 
             </View>

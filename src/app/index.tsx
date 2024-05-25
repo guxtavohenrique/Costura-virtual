@@ -1,36 +1,43 @@
+import React from "react";
 import { theme } from "@/theme";
 import { useNavigation } from "expo-router";
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import * as AuthSession from 'expo-auth-session';
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
 
 export default function SignIn() {
 
     const navigation = useNavigation()
 
-    function handlerSignIn() {
+    async function handlerSignIn() {
+
         navigation.navigate("(tabs)")
+        
     }
 
     return(
 
         <View style={styles.container}>
 
+            <ImageBackground source={require('assets/images/background-unsplash.jpg')} resizeMode="cover" style={styles.imageBackground}>
+
             <View style={styles.areaText}>
 
                 <Text style={styles.text}>
                     Para começar, entre em uma conta Google!
                 </Text>
-                
 
             </View>
 
             <TouchableOpacity style={styles.buttom} onPress={handlerSignIn}>
 
                 <Text style={styles.textButtom}>
-                    Entre em uma conta Google
+                    Entre com o Google
                 </Text>
 
             </TouchableOpacity>
+
+            </ImageBackground>
 
         </View>
 
@@ -43,29 +50,33 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: theme.colors.black
     },
+    imageBackground: {
+        flex: 1,
+        justifyContent: 'center',
+    },
     areaText: {
-        top: 300,
+        bottom: 100,
         padding: 10,
         alignSelf: 'center'
     },
     text: {
         color: theme.colors.white,
         fontFamily: theme.fontFamily.regular,
-        fontSize: 38
+        fontSize: 60
     },
     buttom: {
-        top: 540,
+        top: 150,
         width: 360,
         height: 60,
         alignSelf: 'center',
         borderRadius: 20,
-        backgroundColor: theme.colors.white
+        backgroundColor: theme.colors.vermelho
     },
     textButtom: {
         textAlign: 'center',
         padding: 15,
         fontSize: 22,
         fontFamily: theme.fontFamily.regular,
-        color: theme.colors.black
+        color: theme.colors.white
     }
 })

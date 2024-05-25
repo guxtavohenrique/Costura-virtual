@@ -40,9 +40,12 @@ const styles = StyleSheet.create({
     },
     titleHome: {
         top: 80,
+        width: 360,
         padding: 20,
         paddingLeft: 20,
-        alignItems: 'flex-start',
+        borderRadius: 10,
+        alignSelf: 'center',
+        backgroundColor: theme.colors.blue
     },
     texTitle: {
         fontSize: 40,
