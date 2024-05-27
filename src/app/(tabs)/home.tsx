@@ -8,8 +8,6 @@ import { useNavigation } from 'expo-router';
 
 export default function Home(){
 
-    const navigation = useNavigation()
-
     return(
 
         <KeyboardAvoidingView style={styles.inner}>
@@ -43,9 +41,8 @@ const styles = StyleSheet.create({
         width: 360,
         padding: 20,
         paddingLeft: 20,
-        borderRadius: 10,
         alignSelf: 'center',
-        backgroundColor: theme.colors.blue
+        backgroundColor: theme.colors.gray[800]
     },
     texTitle: {
         fontSize: 40,

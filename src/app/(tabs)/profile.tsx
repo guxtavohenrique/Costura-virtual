@@ -23,18 +23,9 @@ export default function Login(){
 
             </View>
 
-            <Image 
-                //source={{ uri: "" }}
-                style={{
-                    top: 120,
-                    width: 200,
-                    height: 200,
-                    alignSelf: 'center',
-                    borderRadius: 100,
-                    borderWidth: 2,
-                    borderColor: theme.colors.white
-                }}
-                />
+            <Text style={styles.cargoProfile}>
+                Prestador de serviço
+            </Text>
 
             <Text style={styles.nameProfile}>
                 Gustavo Henrique
@@ -68,29 +59,36 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         fontSize: 30,
+        color: theme.colors.white,
         fontFamily: theme.fontFamily.regular,
-        color: theme.colors.white
     },
-    nameProfile: {
+    cargoProfile: {
         top: 180,
         fontSize: 30,
         textAlign: 'center',
-        fontFamily: theme.fontFamily.medium,
         color: theme.colors.white,
+        fontFamily: theme.fontFamily.medium,
+    },
+    nameProfile: {
+        top: 200,
+        fontSize: 30,
+        textAlign: 'center',
+        color: theme.colors.white,
+        fontFamily: theme.fontFamily.medium,
     },
     emailProfile: {
-        top: 200,
+        top: 220,
         fontSize: 18,
         textAlign: 'center',
+        color: theme.colors.white,
         fontFamily: theme.fontFamily.medium,
-        color: theme.colors.vermelho
     },
     exitButtom: {
         top: 340,
-        width: 320,
+        width: 200,
         height: 50,
         alignSelf: 'center',
-        borderRadius: 10,
+        borderRadius: 50,
         backgroundColor: theme.colors.vermelho
     },
     textButtom: {

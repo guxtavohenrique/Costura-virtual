@@ -36,6 +36,10 @@ export default function Layout() {
 
                 <Stack.Screen name="index"/>
 
+                <Stack.Screen name="entrar"/>
+
+                <Stack.Screen name="inscrever"/>
+
                 <Stack.Screen name="(tabs)"/>
 
             </Stack>

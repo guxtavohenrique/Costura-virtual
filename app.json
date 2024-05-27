@@ -4,7 +4,6 @@
     "slug": "costura-virtual",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "scheme": "costura-virtual",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -20,7 +19,6 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },

@@ -1,7 +1,6 @@
 import React from "react";
 import { theme } from "@/theme";
 import { useNavigation } from "expo-router";
-import * as AuthSession from 'expo-auth-session';
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
@@ -11,8 +10,13 @@ export default function SignIn() {
 
     async function handlerSignIn() {
 
-        navigation.navigate("(tabs)")
-        
+        navigation.navigate("entrar")
+
+    }
+    async function handlerInscrever() {
+
+        navigation.navigate("inscrever")
+
     }
 
     return(
@@ -23,17 +27,21 @@ export default function SignIn() {
 
             <View style={styles.areaText}>
 
-                <Text style={styles.text}>
-                    Para começar, entre em uma conta Google!
+                <Text style={styles.textInicio}>
+                    Entre em uma conta!
                 </Text>
 
             </View>
 
-            <TouchableOpacity style={styles.buttom} onPress={handlerSignIn}>
+            <TouchableOpacity style={styles.buttomSignIn} onPress={handlerSignIn}>
 
-                <Text style={styles.textButtom}>
-                    Entre com o Google
-                </Text>
+                <Text style={styles.textSignIn}>Entre</Text>
+
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.buttomSignUp} onPress={handlerInscrever}>
+
+               <Text style={styles.textSignUp}>Inscreva-se</Text>
 
             </TouchableOpacity>
 
@@ -56,27 +64,44 @@ const styles = StyleSheet.create({
     },
     areaText: {
         bottom: 100,
-        padding: 10,
+        padding: 5,
         alignSelf: 'center'
     },
-    text: {
+    textInicio: {
         color: theme.colors.white,
         fontFamily: theme.fontFamily.regular,
         fontSize: 60
     },
-    buttom: {
+    buttomSignIn: {
         top: 150,
-        width: 360,
-        height: 60,
+        width: 310,
+        height: 50,
         alignSelf: 'center',
+        borderWidth: 2,
         borderRadius: 20,
-        backgroundColor: theme.colors.vermelho
+        backgroundColor: theme.colors.white
     },
-    textButtom: {
+    buttomSignUp: {
+        top: 160,
+        width: 310,
+        height: 50,
+        alignSelf: 'center',
+        borderWidth: 2,
+        borderRadius: 20,
+        backgroundColor: theme.colors.white
+    },
+    textSignIn: {
+        padding: 5,
+        fontSize: 20,
         textAlign: 'center',
-        padding: 15,
-        fontSize: 22,
-        fontFamily: theme.fontFamily.regular,
-        color: theme.colors.white
+        color: theme.colors.black,
+        fontFamily: theme.fontFamily.medium,
+    },
+    textSignUp: {
+        padding: 5,
+        fontSize: 20,
+        textAlign: 'center',
+        color: theme.colors.black,
+        fontFamily: theme.fontFamily.medium
     }
 })
